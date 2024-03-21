@@ -1,0 +1,29 @@
+name: Web Vitals & Lighthouse Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Test Web Vitals
+        run: |
+          npm run dev 
+          npm run test:web-vitals
+
+      - name: Test Lighthouse
+        run: |
+          npm run build
+          npm run test:lighthouse
