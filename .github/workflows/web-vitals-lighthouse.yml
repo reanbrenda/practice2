@@ -1,29 +1,29 @@
 name: Web Vitals & Lighthouse Test
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
 jobs:
-  test:
+  lighthouse:
+    name: Lighthouse CI
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build
+      - name: Install dependencies
+        run: npm install
 
-      - name: Test Web Vitals
-        run: |
-          npm run dev 
-          npm run test:web-vitals
+      - name: Lighthouse mobile audit
+        run: npm run lhci:mobile
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
-      - name: Test Lighthouse
-        run: |
-          npm run build
-          npm run test:lighthouse
+      - name: Lighthouse desktop audit
+        run: npm run lhci:desktop
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
