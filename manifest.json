@@ -1,0 +1,16 @@
+{
+    "name": "practice-2",
+    "start_url": "/",
+    "icons": [
+      {
+        "src": "images/lunch/farhad-ibrahimzade-MGKqxm6u2bc-unsplash.jpg",
+        "type": "image/jpeg",
+        "sizes": "1280x720",
+        "label": "Screenshot 2"
+      }
+    ],
+    "display": "standalone",
+    "background_color": "peachpuff",
+    "theme_color": "rgb(255 218 185)"
+  }
+  

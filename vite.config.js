@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import mkcert from 'vite-plugin-mkcert'
 
 
 import path from 'path';
@@ -39,6 +40,8 @@ export default defineConfig({
     ViteMinifyPlugin({
     }),
     addWebVitals(),
+    mkcert(),
+    
   ],
   base: './',
   build: {
