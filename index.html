@@ -34,7 +34,11 @@ https://www.tooplate.com/view/2129-crispy-kitchen
     </head>
 
     <body>
-
+        
+        <div id="geolocation-banner" style="display: none;">
+            <p>We've detected you're in <span id="location-name"></span>. Enjoy special offers for your area!</p>
+            <button onclick="dismissBanner()">Dismiss</button>
+        </div>
         <nav class="navbar navbar-expand-lg bg-white shadow-lg">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -636,10 +640,6 @@ https://www.tooplate.com/view/2129-crispy-kitchen
         <script type = "module" src="js/custom.js"></script>
 
      
-        <div id="geolocation-banner" style="display: none;">
-            <p>We've detected you're in <span id="location-name"></span>. Enjoy special offers for your area!</p>
-            <button onclick="dismissBanner()">Dismiss</button>
-        </div>
     
         <script>
             if ('serviceWorker' in navigator) {
