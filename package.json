@@ -17,7 +17,11 @@
     "vite-plugin-minify": "^1.5.2"
   },
   "dependencies": {
+    "compression": "^1.7.4",
+    "etag": "^1.8.1",
+    "express": "^4.19.1",
     "sharp": "^0.33.2",
+    "uuid": "^9.0.1",
     "vite-plugin-image-optimizer": "^1.1.7",
     "web-vitals": "^3.5.2"
   }
