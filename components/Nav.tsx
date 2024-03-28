@@ -39,7 +39,7 @@ export default function Nav() {
                         <Link className="nav-link" href="/contact">Contact</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="/cocktail">Contact</Link>
+                        <Link className="nav-link" href="/cocktail">Cocktail menu</Link>
                     </li>
                 </ul>
             </div>
