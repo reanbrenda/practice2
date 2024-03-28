@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from "react";
 import Nav from "../components/Nav";
-
+import Image from 'next/image';
 
 
 export default function Home() {
@@ -43,11 +43,12 @@ export default function Home() {
               <div className="carousel-inner">
                 <div className="carousel-item active">
                   <div className="carousel-image-wrap">
-                    <img
-                      src="images/slide/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                    <Image
+                      src="/images/slide/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                       className="img-fluid carousel-image"
                       alt=""
                       loading="lazy"
+                      width={600} height={400} 
                     />
                   </div>
                   <div className="carousel-caption">
