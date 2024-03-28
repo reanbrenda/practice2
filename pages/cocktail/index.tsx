@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Skeleton } from '@nextui-org/react';
 import Head from 'next/head';
+import Nav from '@/components/Nav';
 
 const CocktailsPage: React.FC<{ cocktails: any[] }> = ({ cocktails: initialCocktails }) => {
     const [cocktails, setCocktails] = useState(initialCocktails);
@@ -20,6 +21,8 @@ const CocktailsPage: React.FC<{ cocktails: any[] }> = ({ cocktails: initialCockt
             <Head>
                 <title>Cocktails</title>
             </Head>
+        <Nav/>
+          
             <h1>Cocktails</h1>
             <div className="search-container">
                 <input
@@ -42,7 +45,7 @@ const CocktailsPage: React.FC<{ cocktails: any[] }> = ({ cocktails: initialCockt
                 {/* Display Skeletons for loading */}
                 {Array.from({ length: 10 - (cocktails.length % 3) }, (_, i) => (
                     <div key={`skeleton-${i}`} className="cocktail-item">
-                        <Skeleton height="200px" />
+                        <Skeleton />
                     </div>
                 ))}
             </div>
