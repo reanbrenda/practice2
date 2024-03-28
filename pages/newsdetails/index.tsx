@@ -113,7 +113,7 @@ export default function NewsDetails() {
                 id="comment-name"
                 className="form-control"
                 placeholder="Your Name"
-                required=""
+                required={true}
               />
               <input
                 type="email"
@@ -122,7 +122,7 @@ export default function NewsDetails() {
                 pattern="[^ @]*@[^ @]*"
                 className="form-control"
                 placeholder="Your Email"
-                required=""
+                required={true}
               />
               <textarea
                 className="form-control"
@@ -130,7 +130,7 @@ export default function NewsDetails() {
                 id="comment"
                 name="comment"
                 placeholder="Write a comment"
-                required=""
+                required={true}
                 defaultValue={""}
               />
               <div className="col-lg-3 col-4 mx-auto">
@@ -261,7 +261,7 @@ export default function NewsDetails() {
                   pattern="[^ @]*@[^ @]*"
                   className="form-control"
                   placeholder="Your email address"
-                  required=""
+                  required={true}
                 />
                 <button
                   type="submit"
@@ -375,7 +375,7 @@ export default function NewsDetails() {
                   id="name"
                   className="form-control"
                   placeholder="Your Name"
-                  required=""
+                  required={true}
                 />
               </div>
               <div className="col-lg-6 col-12">
@@ -389,7 +389,7 @@ export default function NewsDetails() {
                   pattern="[^ @]*@[^ @]*"
                   className="form-control"
                   placeholder="your@email.com"
-                  required=""
+                  required={true}
                 />
               </div>
               <div className="col-lg-6 col-12">

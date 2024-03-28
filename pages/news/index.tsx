@@ -232,7 +232,7 @@ export default function News() {
                         id="name"
                         className="form-control"
                         placeholder="Your Name"
-                        required=""
+                        required={true}
                       />
                     </div>
                     <div className="col-lg-6 col-12">
@@ -246,7 +246,7 @@ export default function News() {
                         pattern="[^ @]*@[^ @]*"
                         className="form-control"
                         placeholder="your@email.com"
-                        required=""
+                        required={true}
                       />
                     </div>
                     <div className="col-lg-6 col-12">
@@ -295,7 +295,7 @@ export default function News() {
                         name="time"
                         id="time"
                       >
-                        <option value={5} selected="">
+                        <option value={5} selected={true}>
                           5:00 PM
                         </option>
                         <option value={6}>6:00 PM</option>

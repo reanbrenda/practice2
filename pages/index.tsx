@@ -144,11 +144,18 @@ export default function Home() {
         </div>
       </div>
       <div className="video-wrap">
-        <video autoPlay="" loop="" muted="" className="custom-video" poster="">
-          <source src="video/production_ID_3769033.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+            <video
+              autoPlay={true}
+              loop={false}
+              muted={false}
+              className="custom-video"
+              poster=""
+            >
+              <source src="/video/production_ID_3769033.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+      
       <div className="overlay" />
     </section>
     <section className="menu section-padding">
@@ -434,14 +441,14 @@ export default function Home() {
           </div>
           <div className="col-lg-4 col-md-6 col-12">
             <div className="news-thumb mb-4">
-            <Link>
+            <a href="news-detail.html">
                 <img
                   src="images/news/louis-hansel-GiIiRV0FjwU-unsplash.jpg"
                   className="img-fluid news-image"
                   alt=""
                   loading="lazy"
                 />
-              </Link>
+              </a>
               <div className="news-text-info">
                 <span className="category-tag me-3 bg-info">Meeting</span>
                 <strong>30 April 2022</strong>

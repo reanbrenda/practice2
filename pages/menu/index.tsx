@@ -8,10 +8,6 @@ const Link = dynamic(() => import('next/link'));
 export default function Menu() {
     return (
         <>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
         <title>Crispy Kitchen Menu</title>
         <Nav />
         <main>
@@ -329,7 +325,7 @@ export default function Menu() {
                   id="name"
                   className="form-control"
                   placeholder="Your Name"
-                  required=""
+                  required={true}
                 />
               </div>
               <div className="col-lg-6 col-12">
@@ -343,7 +339,7 @@ export default function Menu() {
                   pattern="[^ @]*@[^ @]*"
                   className="form-control"
                   placeholder="your@email.com"
-                  required=""
+                  required={true}
                 />
               </div>
               <div className="col-lg-6 col-12">
@@ -392,7 +388,7 @@ export default function Menu() {
                   name="time"
                   id="time"
                 >
-                  <option value={5} selected="">
+                  <option value={5} selected={true}>
                     5:00 PM
                   </option>
                   <option value={6}>6:00 PM</option>
