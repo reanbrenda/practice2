@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import Link from 'next/link'
 import React from "react";
 import Nav from "../components/Nav";
 
@@ -7,13 +7,6 @@ import Nav from "../components/Nav";
 export default function Home() {
   return (
   <>
-  <Head>
-  <meta charSet="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Crispy Kitchen - Bootstrap 5 HTML Template</title>
-</Head>
 
 <Nav />
   
@@ -441,14 +434,14 @@ export default function Home() {
           </div>
           <div className="col-lg-4 col-md-6 col-12">
             <div className="news-thumb mb-4">
-              <a href="news-detail.html">
+            <Link>
                 <img
                   src="images/news/louis-hansel-GiIiRV0FjwU-unsplash.jpg"
                   className="img-fluid news-image"
                   alt=""
                   loading="lazy"
                 />
-              </a>
+              </Link>
               <div className="news-text-info">
                 <span className="category-tag me-3 bg-info">Meeting</span>
                 <strong>30 April 2022</strong>
